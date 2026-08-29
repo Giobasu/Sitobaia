@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /images.bak/
+Disallow: /files/*.bak
+
+Sitemap: https://www.baiadipopeye.it/sitemap.xml

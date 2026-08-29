@@ -8,7 +8,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
-    <title>La Baia di Popeye</title>
+    <title>La Baia di Popeye – Ristorante e spiaggia sul Lago di Cingoli</title>
     
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,22 +219,23 @@
     </style>
     
     <link rel="stylesheet" id="cssbaia" href="css/cssbaia.css" media="all">
-    <meta name="description" content="Baia di Popeye">
+    <meta name="description" content="Ristorante, spiaggia e noleggi sul Lago di Castreccioni a Cingoli (MC). Cucina marchigiana, pedalò, canoe, beach volley, area cani. Aperto tutti i giorni.">
 
     <meta property="og:locale" content="it_IT">
     <meta property="og:locale:alternate" content="en_GB">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Home Baia di Popeye">
-    <meta property="og:description" content="Baia di Popeye">
-    <meta property="og:url" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:title" content="La Baia di Popeye – Ristorante e spiaggia sul Lago di Cingoli">
+    <meta property="og:description" content="Ristorante, spiaggia e noleggi sul Lago di Castreccioni a Cingoli (MC). Cucina marchigiana, pedalò, canoe, beach volley, area cani. Aperto tutti i giorni.">
+    <meta property="og:url" content="https://www.baiadipopeye.it/">
+    <meta property="og:site_name" content="La Baia di Popeye">
     <meta property="article:publisher" content="https://www.facebook.com/baiadipopeyelagodicingoli">
     <meta property="article:modified_time" content="2026-02-27T16:24:35+00:00">
     <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:image" content="https://www.baiadipopeye.it/images/SfondoMain.jpg">
+    <meta property="og:image:alt" content="La Baia di Popeye sul Lago di Castreccioni">
+    <link rel="canonical" href="https://www.baiadipopeye.it/">
     
     
-    <link rel="alternate" href="" hreflang="en">
-    <link rel="alternate" href="" hreflang="it">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -385,19 +386,25 @@
     
 
     <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-5X8CTK8');
+        // GTM caricato solo dopo consenso esplicito (GDPR art. 7, Provv. Garante 231/2021).
+        // Chiamato da baiaConsent (banner cookie in fondo alla pagina).
+        function baiaLoadGTM() {
+            if (window.baiaGtmLoaded) return;
+            window.baiaGtmLoaded = true;
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5X8CTK8');
+        }
     </script>
     
     <link rel="icon" href="images/favicon_baia.png" sizes="32x32">
@@ -627,6 +634,122 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+        }
+
+        .baia-map-consent {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 24px;
+            text-align: center;
+            background: #eef2f2;
+            color: #444;
+        }
+
+        .baia-map-consent p {
+            margin: 0;
+            max-width: 340px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .baia-map-consent-btn {
+            border: 0;
+            border-radius: 999px;
+            padding: 11px 26px;
+            background: #156f73;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .baia-map-consent a {
+            color: #156f73;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        /* --- Banner cookie --- */
+        .baia-cookie {
+            position: fixed;
+            left: 16px;
+            right: 16px;
+            bottom: 16px;
+            z-index: 99999;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 22px 26px;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px 24px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #333;
+        }
+
+        .baia-cookie[hidden] {
+            display: none;
+        }
+
+        .baia-cookie-text {
+            flex: 1 1 340px;
+            margin: 0;
+        }
+
+        .baia-cookie-text a {
+            color: #156f73;
+            text-decoration: underline;
+        }
+
+        .baia-cookie-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* Rifiuta e Accetta hanno lo stesso peso visivo: richiesto dal Garante */
+        .baia-cookie-actions button {
+            border-radius: 999px;
+            padding: 11px 28px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 2px solid #156f73;
+        }
+
+        .baia-cookie-reject {
+            background: #fff;
+            color: #156f73;
+        }
+
+        .baia-cookie-accept {
+            background: #156f73;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .baia-cookie {
+                padding: 18px;
+            }
+
+            .baia-cookie-actions {
+                width: 100%;
+            }
+
+            .baia-cookie-actions button {
+                flex: 1;
+                padding: 11px 12px;
+            }
         }
 
         .baia-map-link {
@@ -1128,9 +1251,14 @@
                                     <div class="wpb_column vc_column_container col-md-12">
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper" style="text-align:center;">
-                                                <a href="tel:+393475656722" class="prenota-ora-btn" data-i18n="book_btn">Prenota ora!</a>
+                                                <a href="https://wa.me/393475656722?text=Ciao%21%20Vorrei%20prenotare%20alla%20Baia%20di%20Popeye." class="prenota-ora-btn" target="_blank" rel="noopener" data-i18n="book_btn">Prenota ora!</a>
                                                 <div style="margin-top:80px; font-family:'Satisfy', cursive; font-size:clamp(40px, 8vw, 90px); color:#ffffff; line-height:1.1; text-shadow: 2px 4px 12px rgba(0,0,0,0.35);">Buon Compleanno Baia +10</div>
                                                 <div style="margin-top:20px; font-family:'Satisfy', cursive; font-size:clamp(24px, 5vw, 54px); color:#ffffff; line-height:1.1; text-shadow: 2px 4px 12px rgba(0,0,0,0.35);">Tutti i giorni tutto l'anno</div>
+                                                <div style="margin-top:26px; display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px 24px; font-family:'Oswald', sans-serif; font-weight:300; font-size:clamp(13px, 1.9vw, 20px); letter-spacing:.18em; text-transform:uppercase; color:#ffffff; text-shadow: 1px 2px 8px rgba(0,0,0,0.45);">
+                                                    <span>Cingoli, <strong style="font-weight:500; color:#c89d5e;">borgo dei borghi</strong></span>
+                                                    <span aria-hidden="true" style="flex:none; width:6px; height:6px; border-radius:50%; background:#c89d5e;"></span>
+                                                    <span>Apiro, <strong style="font-weight:500; color:#c89d5e;">Festival Terranostra</strong></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -1156,7 +1284,7 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1597908786829-f1184881-1af4" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('ristorante')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('ristorante')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img fetchpriority="high" decoding="async" width="440" height="440" src="images/calice-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
@@ -1164,7 +1292,7 @@
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="bar_title">RISTORANTE E BAR</div>
                                                                 <div class="desc" data-i18n="bar_desc">Cucina marchigiana, crescia, drink e aperitivo al tramonto</div>
                                                                 <a href="files/Menu-Baia-di-Popeye.pdf" target="_blank" onclick="event.stopPropagation()" style="display:inline-block; margin-top:8px; color:#c89d5e; font-weight:600; text-decoration:underline; font-size:14px;" data-i18n="menu_link">Scopri il nostro menù</a>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1174,14 +1302,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1571364772170-fd72a321-af05" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('spiaggia')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('spiaggia')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="550" height="550" src="images/ombrellone.png" class="red-pricing-img" alt=""></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="beach_title">SPIAGGIA</div>
                                                                 <div class="desc" data-i18n="beach_desc">Noleggio di lettini e ombrelloni a 1€/ora</div>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1191,15 +1319,15 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1571364886558-3258a5ac-efa3" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('noleggi')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('noleggi')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/barca.png" class="red-pricing-img" alt=""></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="boat_title">NOLEGGI IN ACQUA</div>
-                                                                <div class="desc" data-i18n="boat_desc">Noleggio di pedalò, canoe e water bike, offriamo anche il servizio di rimessa natanti!</div>
+                                                                <div class="desc" data-i18n="boat_desc">Noleggio di pedalò e canoe, offriamo anche il servizio di rimessa natanti!</div>
                                                                 <!-- Attracca la tua barca nel nostro pontile per tutta la durata della pesca nel nostro posto riservato custodito non assicurato -->
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1209,14 +1337,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div id="esp1597139848070-36836b71-b0d1" class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('pet')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('pet')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/cane.png" class="red-pricing-img" alt=""></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="welcome_title">PET FRIENDLY</div>
                                                                 <div class="desc" data-i18n="welcome_desc">I vostri amici a 4 zampe sono sempre i benvenuti! La nostra area cani è sempre aperta a loro e possono persino salire con voi sul pedalò! </div>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1226,14 +1354,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('museo')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('museo')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/museo-icon.png" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="museo_lago_title">MUSEO LAGO</div>
                                                                 <div class="desc" data-i18n="museo_lago_desc">All'interno dell'attività troverete foto e documenti raccolti da noi e testimonianze dal 1981 ad oggi.</div>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1243,14 +1371,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('servizi')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('servizi')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/servizi-gratuiti.png" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="servizi_gratuiti_title">SERVIZI GRATUITI</div>
                                                                 <div class="desc" data-i18n="servizi_gratuiti_desc">Offriamo un campo da beach volley gratuito e per i bambini un parco giochi e attività ricreative</div>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1260,14 +1388,14 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div class="red-empty-space"></div>
-                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg" style="cursor:pointer" onclick="openServiceModal('territorio')">
+                                                        <div class="red-fancybox red-fancybox-3 transition red-line-corner-wrap red-bg service-card" role="button" tabindex="0" style="cursor:pointer" onclick="openServiceModal('territorio')">
                                                             <div class="red-fancy-icon-wrap">
                                                                 <div class="red-fancybox-icon transition icon-box square text-accent  red-bg-"> <img decoding="async" width="440" height="440" src="images/territorio-icon.svg" class="red-pricing-img" alt="" sizes="(max-width: 440px) 100vw, 440px"></div>
                                                             </div>
                                                             <div class="fancy-right">
                                                                 <div class="red-fancybox-heading red-heading" data-i18n="territorio_title">SCOPRI IL TERRITORIO</div>
                                                                 <div class="desc" data-i18n="territorio_desc">Scopri le bellezze che offrono le Marche a pochi Km da noi.</div>
-                                                                <footer class="red-fancy-footer"></footer>
+                                                                <footer class="red-fancy-footer"><span class="fancy-cta" data-i18n="more_btn">Scopri di più</span></footer>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1309,9 +1437,15 @@
                                                 <div class="vc_column-inner">
                                                     <div class="wpb_wrapper">
                                                         <div class="baia-map-wrap">
+                                                            <div id="baia-map-consent" class="baia-map-consent" hidden>
+                                                                <p data-i18n="map_consent_text">Per vedere la mappa devi accettare i cookie di terze parti (Google Maps).</p>
+                                                                <button type="button" class="baia-map-consent-btn" onclick="baiaConsent.accept()" data-i18n="map_consent_btn">Accetta e mostra la mappa</button>
+                                                                <a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" rel="noopener" data-i18n="map_consent_link">Oppure apri in Google Maps</a>
+                                                            </div>
                                                             <a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" class="baia-map-link" title="Apri in Google Maps">
                                                                 <iframe
-                                                                    src="https://maps.google.com/maps?q=La+Baia+di+Popeye,+Strada+Provinciale+Cingolana,+Macerata,+Italy&output=embed&z=15"
+                                                                    id="baia-map-iframe"
+                                                                    data-src="https://maps.google.com/maps?q=La+Baia+di+Popeye,+Strada+Provinciale+Cingolana,+Macerata,+Italy&output=embed&z=15"
                                                                     width="100%"
                                                                     height="420"
                                                                     style="border:0; border-radius:12px; pointer-events:none;"
@@ -1449,6 +1583,8 @@
                                     <div class="wpb_text_column wpb_content_element   ">
                                         <div class="wpb_wrapper" style="color:#ffffff;">
                                             <p data-i18n="copyright">Copyright © 2026 La Baia di Popeye. Tutti i diritti sono riservati.</p>
+                                            <p class="privacy"><a href="privacy.html" data-i18n="privacy_link">Privacy Policy</a> &nbsp;|&nbsp; <a href="privacy.html#cookie" data-i18n="cookie_link">Cookie Policy</a> &nbsp;|&nbsp; <a href="#" onclick="event.preventDefault(); baiaConsent.reopen();" data-i18n="cookie_prefs">Preferenze cookie</a></p>
+                                            <p class="privacy"><a href="https://advaisor.it" target="_blank" rel="noopener" data-i18n="credits">Sito realizzato da advAIsor</a></p>
                                         </div>
                                     </div>
                                     <div id="esp1596819190922-77dd57af-66e7" class="red-empty-space"></div>
@@ -1702,6 +1838,95 @@
         flex: 0 0 auto !important;
         max-width: 100% !important;
     }
+
+    /* card della stessa riga alla stessa altezza, CTA sempre in fondo */
+    .vc_custom_1706538339653 .wpb_column {
+        align-self: stretch;
+    }
+    .vc_custom_1706538339653 .wpb_column > .vc_column-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .vc_custom_1706538339653 .wpb_column > .vc_column-inner > .wpb_wrapper {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .vc_custom_1706538339653 .service-card {
+        flex: 1 1 auto;
+    }
+    .service-card .red-pricing-img {
+        width: 100px;
+    }
+    .service-card .red-fancy-icon-wrap {
+        max-width: 100px !important;
+        margin-bottom: 6px !important;
+    }
+    .service-card .red-fancybox-heading {
+        font-size: 17px;
+    }
+    .service-card .desc {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+    .service-card .fancy-right {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    .service-card .red-fancy-footer {
+        margin-top: auto;
+    }
+
+    /* affordance: le card sono cliccabili */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 12px 14px;
+        border: 1px solid #e4eceb;
+        border-radius: 12px;
+        background: #ffffff;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+        height: 100%;
+    }
+    .service-card:hover,
+    .service-card:focus-visible {
+        transform: translateY(-6px);
+        border-color: #1a8a7d;
+        box-shadow: 0 10px 26px rgba(21, 111, 115, .16);
+        outline: none;
+    }
+    .service-card .red-pricing-img {
+        transition: transform .25s ease;
+    }
+    .service-card:hover .red-pricing-img {
+        transform: scale(1.08);
+    }
+    .fancy-cta {
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: #1a8a7d;
+        border-bottom: 1px solid rgba(26, 138, 125, .4);
+        padding-bottom: 3px;
+        transition: border-color .25s ease, gap .25s ease;
+    }
+    .fancy-cta:after {
+        content: ' \2192';
+        display: inline-block;
+        transition: transform .25s ease;
+    }
+    .service-card:hover .fancy-cta {
+        border-bottom-color: #1a8a7d;
+    }
+    .service-card:hover .fancy-cta:after {
+        transform: translateX(4px);
+    }
     </style>
 
     <!-- Service Modals -->
@@ -1936,7 +2161,20 @@
             servizi_gratuiti_title: "FREE ACTIVITIES",
             servizi_gratuiti_desc: "Beach volley, playground, balloon artist Red Penny and face painting for kids — all free!",
             book_btn: "Book now!",
-            copyright: "Copyright \u00a9 2026 La Baia di Popeye. All rights reserved."
+            book_msg: "Hello! I would like to book a table at Baia di Popeye.",
+            more_btn: "Find out more",
+            copyright: "Copyright \u00a9 2026 La Baia di Popeye. All rights reserved.",
+            cookie_banner_text: "We use technical cookies and, with your consent, third-party cookies (Google) for statistics and to display the map. You can accept or reject: if you reject, only necessary cookies stay active.",
+            cookie_policy_link: "Read the cookie policy",
+            cookie_accept: "Accept",
+            cookie_reject: "Reject",
+            map_consent_text: "To view the map you need to accept third-party cookies (Google Maps).",
+            map_consent_btn: "Accept and show the map",
+            map_consent_link: "Or open in Google Maps",
+            privacy_link: "Privacy Policy",
+            cookie_link: "Cookie Policy",
+            credits: "Website by advAIsor",
+            cookie_prefs: "Cookie preferences"
         },
         it: {
             intro_sub: "La Baia di Popeye non \u00e8 solo un ristorante...",
@@ -1958,6 +2196,19 @@
             servizi_gratuiti_title: "SERVIZI GRATUITI",
             servizi_gratuiti_desc: "Beach volley, parco giochi, il clown Red Penny con palloncini e trucca bimbi — tutto gratuito!",
             book_btn: "Prenota ora!",
+            book_msg: "Ciao! Vorrei prenotare alla Baia di Popeye.",
+            more_btn: "Scopri di più",
+            cookie_banner_text: "Usiamo cookie tecnici e, previo tuo consenso, cookie di terze parti (Google) per statistiche e per mostrare la mappa. Puoi accettare o rifiutare: se rifiuti restano attivi solo i cookie necessari.",
+            cookie_policy_link: "Leggi la cookie policy",
+            cookie_accept: "Accetta",
+            cookie_reject: "Rifiuta",
+            map_consent_text: "Per vedere la mappa devi accettare i cookie di terze parti (Google Maps).",
+            map_consent_btn: "Accetta e mostra la mappa",
+            map_consent_link: "Oppure apri in Google Maps",
+            privacy_link: "Privacy Policy",
+            cookie_link: "Cookie Policy",
+            credits: "Sito realizzato da advAIsor",
+            cookie_prefs: "Preferenze cookie",
             copyright: "Copyright \u00a9 2026 La Baia di Popeye. Tutti i diritti sono riservati."
         }
     };
@@ -1975,16 +2226,16 @@
             images: [],
             title: { it: 'SPIAGGIA', en: 'BEACH' },
             text: {
-                it: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px"><img src="images/spiaggia.JPG" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Spiaggia"><img src="images/spiaggia1.JPG" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Spiaggia"></div><p style="margin-bottom:16px">La nostra spiaggia attrezzata si affaccia direttamente sulle acque cristalline del Lago di Castreccioni. Il posto ideale per una giornata di relax in riva al lago, in totale tranquillità.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/ora</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Lettino</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/ora</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Ombrellone</div></div></div>',
-                en: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px"><img src="images/spiaggia.JPG" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Beach"><img src="images/spiaggia1.JPG" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Beach"></div><p style="margin-bottom:16px">Our equipped beach overlooks the crystal-clear waters of Lake Castreccioni — the perfect spot for a peaceful day by the lake, in total relaxation.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/hr</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Sun lounger</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/hr</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Umbrella</div></div></div>'
+                it: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px"><img src="images/spiaggia.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Spiaggia"><img src="images/spiaggia1.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Spiaggia"></div><p style="margin-bottom:16px">La nostra spiaggia attrezzata si affaccia direttamente sulle acque cristalline del Lago di Castreccioni. Il posto ideale per una giornata di relax in riva al lago, in totale tranquillità.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/ora</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Lettino</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/ora</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Ombrellone</div></div></div>',
+                en: '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px"><img src="images/spiaggia.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Beach"><img src="images/spiaggia1.jpg" style="width:100%;height:220px;object-fit:cover;border-radius:8px;display:block" alt="Beach"></div><p style="margin-bottom:16px">Our equipped beach overlooks the crystal-clear waters of Lake Castreccioni — the perfect spot for a peaceful day by the lake, in total relaxation.</p><div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/hr</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Sun lounger</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">1\u20AC<span style="font-size:.6em">/hr</span></div><div style="font-size:1.1em;color:#555;margin-top:3px">Umbrella</div></div></div>'
             }
         },
         noleggi: {
-            images: ['images/pedalo.jpg', 'images/natanti.JPG'],
+            images: ['images/pedalo.jpg', 'images/natanti.jpg'],
             title: { it: 'NOLEGGI IN ACQUA', en: 'WATER RENTALS' },
             text: {
-                it: '<p>Esplora il lago a bordo delle nostre imbarcazioni! Offriamo noleggi per tutti i gusti, adatti a famiglie, coppie e gruppi di amici. I tuoi amici a quattro zampe possono salire a bordo con te!</p><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Cosa noleggiare</h3><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><li><strong>Pedalò</strong> — il classico, perfetto per famiglie e bambini</li><li><strong>Canoe</strong> — per esplorare le rive del lago in totale libertà</li><li><strong>Water bike</strong> — divertimento e sport sull\'acqua</li></ul>',
-                en: '<p>Explore the lake aboard our watercraft! We offer rentals for all tastes, suitable for families, couples, and groups of friends. Your four-legged friends are welcome on board too!</p><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Available rentals</h3><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><li><strong>Pedalo</strong> — the classic, perfect for families and children</li><li><strong>Canoe</strong> — explore the lake shores in total freedom</li><li><strong>Water bike</strong> — fun and sport on the water</li></ul>'
+                it: '<p>Esplora il lago a bordo delle nostre imbarcazioni! Offriamo noleggi per tutti i gusti, adatti a famiglie, coppie e gruppi di amici. I tuoi amici a quattro zampe possono salire a bordo con te!</p><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Cosa noleggiare</h3><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><li><strong>Pedalò</strong> — il classico, perfetto per famiglie e bambini</li><li><strong>Canoe</strong> — per esplorare le rive del lago in totale libertà</li></ul><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Tariffe pedalò</h3><div style="display:flex;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">6\u20AC</div><div style="font-size:1.1em;color:#555;margin-top:3px">Mezz\'ora</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">10\u20AC</div><div style="font-size:1.1em;color:#555;margin-top:3px">1 ora</div></div></div>',
+                en: '<p>Explore the lake aboard our watercraft! We offer rentals for all tastes, suitable for families, couples, and groups of friends. Your four-legged friends are welcome on board too!</p><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Available rentals</h3><ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><li><strong>Pedalo</strong> — the classic, perfect for families and children</li><li><strong>Canoe</strong> — explore the lake shores in total freedom</li></ul><h3 style="margin:18px 0 10px;font-size:1.1em;color:#156f73;font-family:\'Oswald\',sans-serif;letter-spacing:.08em">Pedalo rates</h3><div style="display:flex;gap:12px;flex-wrap:wrap"><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">6\u20AC</div><div style="font-size:1.1em;color:#555;margin-top:3px">30 minutes</div></div><div style="flex:1;min-width:130px;background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:2.2em;color:#156f73;line-height:1">10\u20AC</div><div style="font-size:1.1em;color:#555;margin-top:3px">1 hour</div></div></div>'
             }
         },
         pet: {
@@ -1999,8 +2250,8 @@
             images: [],
             title: { it: 'MUSEO LAGO', en: 'LAKE MUSEUM' },
             text: {
-                it: '<p style="margin-bottom:18px">Il Museo del Lago di Castreccioni raccoglie fotografie storiche, documenti che raccontano la storia della costruzione della diga e la nascita del lago artificiale. Un viaggio nel tempo tra tradizioni locali.</p><h3 style="font-family:\'Oswald\',sans-serif;font-size:1.1em;color:#156f73;letter-spacing:.08em;margin:0 0 14px">LA DIGA DI CINGOLI</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">1959</div><div style="font-size:.85em;color:#555;margin-top:3px">Anno di completamento della diga</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">62 m</div><div style="font-size:.85em;color:#555;margin-top:3px">Altezza dello sbarramento</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">5,7 km²</div><div style="font-size:.85em;color:#555;margin-top:3px">Superficie del lago artificiale</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">Musone</div><div style="font-size:.85em;color:#555;margin-top:3px">Fiume sbarrato dalla diga</div></div></div><img src="images/museo2.png" style="width:100%;border-radius:8px;display:block;margin-top:18px;margin-bottom:8px" alt="Museo Lago"><img src="images/museo3.png" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Museo Lago"><img src="images/museo.png" style="width:100%;border-radius:8px;display:block" alt="Museo Lago">',
-                en: '<p style="margin-bottom:18px">The Lake Castreccioni Museum houses historical photographs, documents that tell the story of the dam\'s construction and the birth of this artificial lake — a journey through time amid local traditions.</p><h3 style="font-family:\'Oswald\',sans-serif;font-size:1.1em;color:#156f73;letter-spacing:.08em;margin:0 0 14px">THE CINGOLI DAM</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">1959</div><div style="font-size:.85em;color:#555;margin-top:3px">Year the dam was completed</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">62 m</div><div style="font-size:.85em;color:#555;margin-top:3px">Height of the dam wall</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">5.7 km²</div><div style="font-size:.85em;color:#555;margin-top:3px">Surface area of the artificial lake</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">Musone</div><div style="font-size:.85em;color:#555;margin-top:3px">River dammed to create the lake</div></div></div><img src="images/museo2.png" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Lake Museum"><img src="images/museo3.png" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Lake Museum"><img src="images/museo.png" style="width:100%;border-radius:8px;display:block" alt="Lake Museum">'
+                it: '<p style="margin-bottom:18px">Il Museo del Lago di Castreccioni raccoglie fotografie storiche, documenti che raccontano la storia della costruzione della diga e la nascita del lago artificiale. Un viaggio nel tempo tra tradizioni locali.</p><h3 style="font-family:\'Oswald\',sans-serif;font-size:1.1em;color:#156f73;letter-spacing:.08em;margin:0 0 14px">LA DIGA DI CINGOLI</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">1959</div><div style="font-size:.85em;color:#555;margin-top:3px">Anno di completamento della diga</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">62 m</div><div style="font-size:.85em;color:#555;margin-top:3px">Altezza dello sbarramento</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">5,7 km²</div><div style="font-size:.85em;color:#555;margin-top:3px">Superficie del lago artificiale</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">Musone</div><div style="font-size:.85em;color:#555;margin-top:3px">Fiume sbarrato dalla diga</div></div></div><img src="images/museo2.jpg" style="width:100%;border-radius:8px;display:block;margin-top:18px;margin-bottom:8px" alt="Museo Lago"><img src="images/museo3.jpg" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Museo Lago"><img src="images/museo.jpg" style="width:100%;border-radius:8px;display:block" alt="Museo Lago">',
+                en: '<p style="margin-bottom:18px">The Lake Castreccioni Museum houses historical photographs, documents that tell the story of the dam\'s construction and the birth of this artificial lake — a journey through time amid local traditions.</p><h3 style="font-family:\'Oswald\',sans-serif;font-size:1.1em;color:#156f73;letter-spacing:.08em;margin:0 0 14px">THE CINGOLI DAM</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">1959</div><div style="font-size:.85em;color:#555;margin-top:3px">Year the dam was completed</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">62 m</div><div style="font-size:.85em;color:#555;margin-top:3px">Height of the dam wall</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">5.7 km²</div><div style="font-size:.85em;color:#555;margin-top:3px">Surface area of the artificial lake</div></div><div style="background:#f4f9f9;border-left:3px solid #156f73;padding:12px 14px;border-radius:0 6px 6px 0"><div style="font-family:\'Oswald\',sans-serif;font-size:1.6em;color:#156f73;line-height:1">Musone</div><div style="font-size:.85em;color:#555;margin-top:3px">River dammed to create the lake</div></div></div><img src="images/museo2.jpg" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Lake Museum"><img src="images/museo3.jpg" style="width:100%;border-radius:8px;display:block;margin-bottom:8px" alt="Lake Museum"><img src="images/museo.jpg" style="width:100%;border-radius:8px;display:block" alt="Lake Museum">'
             }
         },
         territorio: {
@@ -2020,6 +2271,40 @@
             }
         }
     };
+
+    // ponytail: prefetch immagini del modale al primo hover/touch sulla card,
+    // così il modale si apre gia' pieno senza scaricare 3+ MB in anticipo per tutti.
+    var prefetched = {};
+    function prefetchServiceImages(serviceId) {
+        if (prefetched[serviceId]) return;
+        prefetched[serviceId] = true;
+        var data = serviceModalData[serviceId];
+        if (!data) return;
+        var urls = data.images.slice();
+        var found = data.text.it.match(/src="[^"]+"/g) || [];
+        for (var i = 0; i < found.length; i++) urls.push(found[i].slice(5, -1));
+        for (var j = 0; j < urls.length; j++) new Image().src = urls[j];
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var cards = document.querySelectorAll('[onclick^="openServiceModal("]');
+        for (var i = 0; i < cards.length; i++) {
+            (function(card) {
+                var id = card.getAttribute('onclick').replace(/.*\('|'\).*/g, '');
+                card.addEventListener('mouseenter', function() { prefetchServiceImages(id); });
+                card.addEventListener('touchstart', function() { prefetchServiceImages(id); }, { passive: true });
+            })(cards[i]);
+        }
+    });
+
+    // card cliccabili anche da tastiera (sono div con onclick)
+    document.addEventListener('keydown', function(e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var card = e.target.closest && e.target.closest('.service-card');
+        if (!card) return;
+        e.preventDefault();
+        card.click();
+    });
 
     function openServiceModal(serviceId) {
         var data = serviceModalData[serviceId];
@@ -2074,6 +2359,9 @@
                 els[i].textContent = lang[key];
             }
         }
+        var btn = document.querySelector('.prenota-ora-btn');
+        if (btn) btn.href = 'https://wa.me/393475656722?text=' + encodeURIComponent(lang.book_msg);
+
         var itEl = document.getElementById('lang-it');
         var enEl = document.getElementById('lang-en');
         if (currentLang === 'en') {
@@ -2090,6 +2378,70 @@
             document.getElementById('html-wrap').lang = 'it-IT';
         }
     }
+    </script>
+    <div id="baia-cookie" class="baia-cookie" role="dialog" aria-live="polite" aria-label="Consenso cookie" hidden>
+        <p class="baia-cookie-text"><span data-i18n="cookie_banner_text">Usiamo cookie tecnici e, previo tuo consenso, cookie di terze parti (Google) per statistiche e per mostrare la mappa. Puoi accettare o rifiutare: se rifiuti restano attivi solo i cookie necessari.</span> <a href="privacy.html#cookie" data-i18n="cookie_policy_link">Leggi la cookie policy</a></p>
+        <div class="baia-cookie-actions">
+            <button type="button" class="baia-cookie-reject" onclick="baiaConsent.reject()" data-i18n="cookie_reject">Rifiuta</button>
+            <button type="button" class="baia-cookie-accept" onclick="baiaConsent.accept()" data-i18n="cookie_accept">Accetta</button>
+        </div>
+    </div>
+
+    <script>
+    // Consenso cookie. Stato in localStorage: 'accepted' | 'rejected' | assente.
+    // ponytail: due stati, niente categorie granulari. Servono solo se aggiungete tag oltre a GTM+Maps.
+    var baiaConsent = (function() {
+        var KEY = 'baia_cookie_consent';
+        var banner = document.getElementById('baia-cookie');
+        var mapFrame = document.getElementById('baia-map-iframe');
+        var mapBlock = document.getElementById('baia-map-consent');
+
+        function read() {
+            try { return localStorage.getItem(KEY); } catch (e) { return null; }
+        }
+
+        function write(v) {
+            try { localStorage.setItem(KEY, v); } catch (e) {}
+        }
+
+        function loadThirdParty() {
+            if (typeof baiaLoadGTM === 'function') baiaLoadGTM();
+            if (mapFrame && !mapFrame.src) mapFrame.src = mapFrame.getAttribute('data-src');
+            if (mapBlock) mapBlock.hidden = true;
+        }
+
+        function blockThirdParty() {
+            if (mapBlock) mapBlock.hidden = false;
+        }
+
+        function apply(state) {
+            if (state === 'accepted') loadThirdParty();
+            else blockThirdParty();
+        }
+
+        function decide(state) {
+            write(state);
+            if (banner) banner.hidden = true;
+            apply(state);
+        }
+
+        var api = {
+            accept: function() { decide('accepted'); },
+            reject: function() { decide('rejected'); },
+            reopen: function() {
+                if (banner) {
+                    banner.hidden = false;
+                    banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        };
+
+        var saved = read();
+        apply(saved);
+        if (saved !== 'accepted' && saved !== 'rejected' && banner) banner.hidden = false;
+
+        return api;
+    })();
     </script>
 </body>
 
