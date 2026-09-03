@@ -629,6 +629,19 @@
             filter: brightness(0) invert(1);
         }
 
+        /* h1 per SEO/screen reader: il titolo visivo dell'hero e' una promo che cambia */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         .baia-map-wrap {
             position: relative;
             border-radius: 12px;
@@ -649,6 +662,10 @@
             text-align: center;
             background: #eef2f2;
             color: #444;
+        }
+
+        .baia-map-consent[hidden] {
+            display: none;
         }
 
         .baia-map-consent p {
@@ -1251,6 +1268,7 @@
                                     <div class="wpb_column vc_column_container col-md-12">
                                         <div class="vc_column-inner">
                                             <div class="wpb_wrapper" style="text-align:center;">
+                                                <h1 class="sr-only" data-i18n="hero_h1">La Baia di Popeye – Ristorante e spiaggia sul Lago di Cingoli</h1>
                                                 <a href="https://wa.me/393475656722?text=Ciao%21%20Vorrei%20prenotare%20alla%20Baia%20di%20Popeye." class="prenota-ora-btn" target="_blank" rel="noopener" data-i18n="book_btn">Prenota ora!</a>
                                                 <div style="margin-top:80px; font-family:'Satisfy', cursive; font-size:clamp(40px, 8vw, 90px); color:#ffffff; line-height:1.1; text-shadow: 2px 4px 12px rgba(0,0,0,0.35);">Buon Compleanno Baia +10</div>
                                                 <div style="margin-top:20px; font-family:'Satisfy', cursive; font-size:clamp(24px, 5vw, 54px); color:#ffffff; line-height:1.1; text-shadow: 2px 4px 12px rgba(0,0,0,0.35);">Tutti i giorni tutto l'anno</div>
@@ -1445,7 +1463,7 @@
                                                             <a href="https://maps.app.goo.gl/tF9uDrbXbFaLMZVVA" target="_blank" class="baia-map-link" title="Apri in Google Maps">
                                                                 <iframe
                                                                     id="baia-map-iframe"
-                                                                    data-src="https://maps.google.com/maps?q=La+Baia+di+Popeye,+Strada+Provinciale+Cingolana,+Macerata,+Italy&output=embed&z=15"
+                                                                    data-src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sLa+Baia+di+Popeye,+Strada+Provinciale+Cingolana,+Macerata,+Italy!6i15"
                                                                     width="100%"
                                                                     height="420"
                                                                     style="border:0; border-radius:12px; pointer-events:none;"
@@ -2168,6 +2186,7 @@
             cookie_policy_link: "Read the cookie policy",
             cookie_accept: "Accept",
             cookie_reject: "Reject",
+            hero_h1: "La Baia di Popeye – Restaurant and beach on Lake Cingoli",
             map_consent_text: "To view the map you need to accept third-party cookies (Google Maps).",
             map_consent_btn: "Accept and show the map",
             map_consent_link: "Or open in Google Maps",
@@ -2202,6 +2221,7 @@
             cookie_policy_link: "Leggi la cookie policy",
             cookie_accept: "Accetta",
             cookie_reject: "Rifiuta",
+            hero_h1: "La Baia di Popeye – Ristorante e spiaggia sul Lago di Cingoli",
             map_consent_text: "Per vedere la mappa devi accettare i cookie di terze parti (Google Maps).",
             map_consent_btn: "Accetta e mostra la mappa",
             map_consent_link: "Oppure apri in Google Maps",
