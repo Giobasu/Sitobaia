@@ -549,7 +549,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url(../fonts/fa-brands-400.eot);
-	src: url(../fonts/fa-brands-400.eot#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype"), url(../images/fa-brands-400.svg#fontawesome) format("svg");
+	src: url(../fonts/fa-brands-400.eot#iefix) format("embedded-opentype"), url(../fonts/fa-brands-400.woff2) format("woff2"), url(../fonts/fa-brands-400.woff) format("woff"), url(../fonts/fa-brands-400.ttf) format("truetype");
 	font-display: swap
 }
 
@@ -562,7 +562,7 @@
 	font-style: normal;
 	font-weight: 300;
 	src: url(../fonts/fa-light-300.eot);
-	src: url(../fonts/fa-light-300.eot#iefix) format("embedded-opentype"), url(../fonts/fa-light-300.woff2) format("woff2"), url(../fonts/fa-light-300.woff) format("woff"), url(../fonts/fa-light-300.ttf) format("truetype"), url(../images/fa-light-300.svg#fontawesome) format("svg");
+	src: url(../fonts/fa-light-300.eot#iefix) format("embedded-opentype"), url(../fonts/fa-light-300.woff2) format("woff2"), url(../fonts/fa-light-300.woff) format("woff"), url(../fonts/fa-light-300.ttf) format("truetype");
 	font-display: swap
 }
 
@@ -571,7 +571,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url(../fonts/fa-regular-400.eot);
-	src: url(../fonts/fa-regular-400.eot#iefix) format("embedded-opentype"), url(../fonts/fa-regular-400.woff2) format("woff2"), url(../fonts/fa-regular-400.woff) format("woff"), url(../fonts/fa-regular-400.ttf) format("truetype"), url(../images/fa-regular-400.svg#fontawesome) format("svg");
+	src: url(../fonts/fa-regular-400.eot#iefix) format("embedded-opentype"), url(../fonts/fa-regular-400.woff2) format("woff2"), url(../fonts/fa-regular-400.woff) format("woff"), url(../fonts/fa-regular-400.ttf) format("truetype");
 	font-display: swap
 }
 
@@ -588,7 +588,7 @@
 	font-style: normal;
 	font-weight: 900;
 	src: url(../fonts/fa-solid-900.eot);
-	src: url(../fonts/fa-solid-900.eot#iefix) format("embedded-opentype"), url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.woff) format("woff"), url(../fonts/fa-solid-900.ttf) format("truetype"), url(../images/fa-solid-900.svg#fontawesome) format("svg");
+	src: url(../fonts/fa-solid-900.eot#iefix) format("embedded-opentype"), url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.woff) format("woff"), url(../fonts/fa-solid-900.ttf) format("truetype");
 	font-display: swap
 }
 
@@ -860,18 +860,10 @@
 @font-face {
 	font-family: flaticon;
 	src: url(../fonts/Flaticon.eot);
-	src: url(../fonts/Flaticon.eot#iefix) format("embedded-opentype"), url(../fonts/Flaticon.woff2) format("woff2"), url(../fonts/Flaticon.woff) format("woff"), url(../fonts/Flaticon.ttf) format("truetype"), url(../images/Flaticon.svg#Flaticon) format("svg");
+	src: url(../fonts/Flaticon.eot#iefix) format("embedded-opentype"), url(../fonts/Flaticon.woff2) format("woff2"), url(../fonts/Flaticon.woff) format("woff"), url(../fonts/Flaticon.ttf) format("truetype");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: flaticon;
-		src: url(../images/Flaticon.svg#Flaticon) format("svg");
-		font-display: swap
-	}
 }
 
 [class*=" flaticon-"]:after,
@@ -7137,7 +7129,6 @@ select {
 	position: relative;
 	overflow: hidden;
 	background-color: #e9e9e9;
-	background-image: url(../images/bg-pagetitle.jpg);
 	background-position: center center;
 	background-size: cover;
 	background-attachment: fixed;
@@ -13687,7 +13678,7 @@ ul.wp-block-gallery {
 @font-face {
 	font-family: futurabook;
 	src: url(../fonts/futura_book_font-webfont.eot);
-	src: url(../fonts/futura_book_font-webfont.eot#iefix) format('embedded-opentype'), url(../fonts/futura_book_font-webfont.woff2) format('woff2'), url(../fonts/futura_book_font-webfont.woff) format('woff'), url(../fonts/futura_book_font-webfont.ttf) format('truetype'), url(../images/futura_book_font-webfont.svg#futurabook) format('svg');
+	src: url(../fonts/futura_book_font-webfont.eot#iefix) format('embedded-opentype'), url(../fonts/futura_book_font-webfont.woff2) format('woff2'), url(../fonts/futura_book_font-webfont.woff) format('woff'), url(../fonts/futura_book_font-webfont.ttf) format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap
@@ -13695,16 +13686,7 @@ ul.wp-block-gallery {
 
 @font-face {
 	font-family: futuramedium;
-	src: url(../fonts/futura_medium_bt-webfont.woff2) format('woff2'), url(../fonts/futura_medium_bt-webfont.woff) format('woff'), url(../fonts/futura_medium_bt-webfont.ttf) format('truetype'), url(../images/futura_medium_bt-webfont.svg#futuramedium) format('svg');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap
-}
-
-@font-face {
-	font-family: futura_bdcn_btbold;
-	src: url(../fonts/futura_bold_font-webfont.eot);
-	src: url(../fonts/futura_bold_font-webfont.eot#iefix) format('embedded-opentype'), url(../fonts/futura_bold_font-webfont.woff2) format('woff2'), url(../fonts/futura_bold_font-webfont.woff) format('woff'), url(../fonts/futura_bold_font-webfont.ttf) format('truetype'), url(../images/futura_bold_font-webfont.svg#futura_bdcn_btbold) format('svg');
+	src: url(../fonts/futura_medium_bt-webfont.woff2) format('woff2'), url(../fonts/futura_medium_bt-webfont.woff) format('woff'), url(../fonts/futura_medium_bt-webfont.ttf) format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap
@@ -13713,15 +13695,7 @@ ul.wp-block-gallery {
 @font-face {
 	font-family: futura_bk_btbook_italic;
 	src: url(../fonts/futura_book_italic_font-webfont.eot);
-	src: url(../fonts/futura_book_italic_font-webfont.eot#iefix) format('embedded-opentype'), url(../fonts/futura_book_italic_font-webfont.woff2) format('woff2'), url(../fonts/futura_book_italic_font-webfont.woff) format('woff'), url(../fonts/futura_book_italic_font-webfont.ttf) format('truetype'), url(../images/futura_book_italic_font-webfont.svg#futura_bk_btbook_italic) format('svg');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap
-}
-
-@font-face {
-	font-family: FuturaBT-Heavy;
-	src: url(../fonts/FuturaBT-Heavy.eot#iefix) format('embedded-opentype'), url(../fonts/FuturaBT-Heavy.woff) format('woff'), url(../fonts/FuturaBT-Heavy.ttf) format('truetype'), url(../images/FuturaBT-Heavy.svg#FuturaBT-Heavy) format('svg');
+	src: url(../fonts/futura_book_italic_font-webfont.eot#iefix) format('embedded-opentype'), url(../fonts/futura_book_italic_font-webfont.woff2) format('woff2'), url(../fonts/futura_book_italic_font-webfont.woff) format('woff'), url(../fonts/futura_book_italic_font-webfont.ttf) format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap
@@ -17054,122 +17028,6 @@ div[id^=monster-widget-placeholder-] img {
 }
 
 @font-face {
-	font-family: Raleway;
-	font-style: normal;
-	font-weight: 300;
-	font-display: swap;
-	src: url(../fonts/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVuEorCIPrQ.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 100;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHRuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 300;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLt_QuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 400;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLoHQuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 500;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLrPQuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 700;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLmbXuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: italic;
-	font-weight: 900;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOKCnqEu92Fr1Mu53ZEC9_Vu3r1gIhOszmOClHrs6ljXfMMLijXuAj-lg.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 100;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbFmUiA8.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 300;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiA8.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 400;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiA8.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 500;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiA8.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 700;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjalmUiA8.ttf) format('truetype')
-}
-
-@font-face {
-	font-family: Roboto;
-	font-style: normal;
-	font-weight: 900;
-	font-stretch: normal;
-	font-display: swap;
-	src: url(../fonts/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuZtalmUiA8.ttf) format('truetype')
-}
-
-@font-face {
 	font-family: Satisfy;
 	font-style: normal;
 	font-weight: 400;
@@ -17698,7 +17556,7 @@ img {
 }
 
 .vc_custom_1706539016680 {
-	background-image: url(images/SfondoMain.jpg) !important;
+	background-image: url(../images/SfondoMain.jpg) !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important
