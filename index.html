@@ -2305,6 +2305,11 @@
         var btn = document.querySelector('.prenota-ora-btn');
         if (btn) btn.href = 'https://wa.me/393475656722?text=' + encodeURIComponent(lang.book_msg);
 
+        var menuLinks = document.querySelectorAll('a[href^="files/Menu-Baia-di-Popeye"]');
+        for (var m = 0; m < menuLinks.length; m++) {
+            menuLinks[m].setAttribute('href', currentLang === 'en' ? 'files/Menu-Baia-di-Popeye-EN.pdf' : 'files/Menu-Baia-di-Popeye.pdf');
+        }
+
         var itEl = document.getElementById('lang-it');
         var enEl = document.getElementById('lang-en');
         if (currentLang === 'en') {
